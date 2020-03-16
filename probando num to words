@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Mar  9 19:29:39 2020
+
+@author: ciro
+"""
+
+import inflect
+
+p = inflect.engine()
+
+words = p.number_to_words("32323")
+print(words)
+
+#%%
+def reverse_recur(str):
+  if len(str) == 0:
+    return str
+  else:
+    print(str[1:])
+    return reverse_recur(str[1:]) + str[0]
+
+    str = input("Enter your string: ")
+    rev_str = reverse_recur(str)
+    print("Reverse of your string: ", rev_str)

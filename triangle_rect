@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar 11 21:47:52 2020
+
+@author: ciro
+"""
+
+"""
+Escribir un programa que pida al usuario un número entero y muestre por pantalla 
+un triángulo rectángulo como el de más abajo, de altura el número introducido.
+"""
+height = int(input("What is the heigth of the triangle?: "))
+
+for i in range(1,height + 1):
+    print('*'*i)
+    
+#%%
+
+num = int(input("Enter an integer number: "))
+
+for i in range(1, num + 1, 2):
+    for j in range(i, 0, -2):
+        print(j, end = " ")
+    print("")
+#%%
+    # Contador
+from collections import Counter
+word = 'hola hola hoal hola hola hola'
+letter = 'h'
+c = Counter(word)
+counter = c[letter]
+print(c)
+print(counter)
+
+#%%
+
+integer = int(input("Enter an integer number: "))
+money  = [5, 2, 1]
+
+for i in money:
+    counter = integer//i
+    integer = integer%i
+    print(f"Cantidad de billetes de {i} euros = {counter}")

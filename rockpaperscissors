@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Mar 16 19:07:32 2020
+
+@author: ciro
+"""
+#%%
+
+print("="*26)
+print("Rock, Paper, Scissors game\nPress Q to exit")
+print("="*26)
+play = 'Y'
+c1 = 0
+c2 = 0
+
+while play == 'Y':
+    player1 = input("Player 1: ").lower()
+    player2 = input("Player 2: ").lower()
+    if player1 == 'q' or player2 == 'q':
+        print("Programa cerrado!")
+        break
+    #print(f"Player 1: {player1}")
+    #print(f"Player 2: {player2}")
+    if player1 == player2:
+        print('\n'+"*"*26)
+        print("It's a tie")
+        print("*"*26 + '\n')
+    if player1 == 'rock':
+        if player2 == 'paper':
+            c2 += 1
+            print('\n'+"*"*26)
+            print("Player 2 wins!")
+            print("*"*26 + '\n')
+        elif player2 == 'scissors':
+            c1 += 1
+            print('\n'+"*"*26)
+            print("Player 1 wins!")
+            print("*"*26 + '\n')
+        else:
+            print("Invalid input >:@")
+    
+    elif player1 == 'scissors':
+        if player2 == 'paper':
+            c1 += 1
+            print('\n'+"*"*26)
+            print("Player 1 wins!")
+            print("*"*26 + '\n')
+        elif player2 == 'rock':
+            c2 += 1
+            print('\n'+"*"*26)
+            print("Player 2 wins!")
+            print("*"*26 + '\n')
+        else:
+            print("Invalid input >:@")   
+    elif player1 == 'paper':
+        if player2 == 'scissors':
+            c2 += 1
+            print('\n'+"*"*26)
+            print("Player 2 wins!")
+            print("*"*26 + '\n')
+        elif player2 == 'rock':
+            c1 += 1
+            print('\n'+"*"*26)
+            print("Player 1 wins!")
+            print("*"*26 + '\n')
+        else:
+            print("Invalid input >:@")
+    else:
+        print("Invalid input >:@")  
+    print(f"SCORE:\nPlayer 1: {c1}\nPlayer 2: {c2}")
+    play = input('Do you want to play again? (Y/N): ').upper()
